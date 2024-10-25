@@ -1,5 +1,19 @@
 {
+  "build": {
+    "script": "gradlew",
+    "tasks": ["clean", "build"],
+    "args": [],
+    "jdk": "11"
+  },
+  "env": {
+    "MY_ENV_VAR": "value"
+  },
+  "dependencies": {
+    "runtime": ["org.springframework.boot:spring-boot-starter-web:2.5.4"],
+    "test": ["junit:junit:4.13.2"]
+  },
   "deploy": {
-    "goal": "grails:run"
+    "command": "./gradlew bootRun",
+    "port": 8080
   }
 }
