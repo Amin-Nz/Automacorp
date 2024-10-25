@@ -1,19 +1,9 @@
 {
   "build": {
-    "script": "gradlew",
-    "tasks": ["clean", "build"],
-    "args": [],
-    "jdk": "11"
-  },
-  "env": {
-    "MY_ENV_VAR": "value"
-  },
-  "dependencies": {
-    "runtime": ["org.springframework.boot:spring-boot-starter-web:2.5.4"],
-    "test": ["junit:junit:4.13.2"]
+    "type": "gradle",
+    "goal": "assemble"
   },
   "deploy": {
-    "command": "./gradlew bootRun",
-    "port": 8080
+    "jarName": "./build/libs/automacorp-0.0.1-SNAPSHOT.jar"
   }
 }
